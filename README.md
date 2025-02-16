@@ -1,28 +1,32 @@
 # Contabilidade Axies
 
-Esta ferramenta foi desenvolvida para auxiliar usuários que possuem axies alugados na plataforma **LootRush** e desejam realizar a contagem manual dos aluguéis gerados. A aplicação processa os dados colados pelo usuário, extrai o número de axies locados e realiza os seguintes cálculos:
+Esta ferramenta foi desenvolvida para auxiliar usuários que possuem axies alugados na plataforma **LootRush** e desejam realizar a contagem manual dos aluguéis gerados. A aplicação processa os dados inseridos, extrai a quantidade de axies locados e realiza os seguintes cálculos:
 
 - **Soma dos Valores de Aluguel (USD):** Soma os valores informados.
-- **Desconto de 10%:** Aplica desconto de 10% (taxa da plataforma) sobre o valor total.
+- **Desconto de 10%:** Aplica um desconto de 10% (taxa da plataforma) sobre o valor total.
 - **Conversão para BRL:** Converte o valor final de USD para BRL utilizando a API [Frankfurter](https://www.frankfurter.app/) (com cache de 4 horas).
-- **Projeções:** Exibe projeções de lucro semanal (valor diário × 7) e mensal (valor diário × 30) em USD e BRL.
+- **Projeções de Lucro:** Calcula projeções de lucro semanal (valor diário × 7) e mensal (valor diário × 30) em USD e BRL.
 - **Estatísticas:** Calcula a média de lucro por axie.
 
 ## Funcionalidades
 
 - **Contagem de Axies:** Processa os dados e extrai a quantidade de axies locados.
 - **Cálculo de Lucro:** Soma os valores em USD e aplica o desconto de 10%.
-- **Conversão de Moeda:** Converte o valor descontado de USD para BRL.
+- **Conversão de Moeda:** Converte o valor final (com desconto) de USD para BRL.
 - **Projeções de Lucro:** Exibe projeções semanais e mensais.
 - **Estatísticas Básicas:** Calcula a média de lucro por axie.
+
+## Sobre o Projeto
+
+Este é o meu primeiro projeto público e foi criado com o objetivo de praticar e aprimorar meus conhecimentos em programação e controle de versão. Estou aberto a sugestões e melhorias, e espero que a ferramenta seja útil para outros usuários que também desejam praticar ou utilizar a contabilidade dos aluguéis de axies.
 
 ## Estrutura do Projeto
 
 
 ## Como Usar
 
-1. **Executar a Aplicação:**
-   - Clique duas vezes no arquivo `executarAxies.bat`.
+1. **Execução da Aplicação:**
+   - Dê um duplo clique no arquivo `executarAxies.bat`.
    - Uma janela de terminal será aberta.
    - Cole os dados de aluguel no terminal. Cada bloco de dados deve ser finalizado com a palavra `FIM` em uma nova linha.
    - Ao finalizar, o programa exibirá:
@@ -34,11 +38,17 @@ Esta ferramenta foi desenvolvida para auxiliar usuários que possuem axies aluga
 
 2. **Requisitos:**
    - [Java Runtime Environment (JRE) 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) ou superior.
-   - Se desejar compilar a partir do código-fonte, [Apache Maven](https://maven.apache.org/).
+   - Se desejar compilar a partir do código-fonte, é necessário o [Apache Maven](https://maven.apache.org/).
 
 ## Build (Opcional)
 
-Para compilar o projeto a partir do código-fonte, abra o terminal na pasta do projeto e execute:
+Para compilar o projeto a partir do código-fonte:
 
-```bash
-mvn clean package
+1. Abra um terminal na raiz do projeto.
+2. Execute o comando:
+   ```bash
+   mvn clean package
+
+## Distribuição
+
+Para distribuir a ferramenta, basta copiar toda a pasta **Contabilidade Axies** para qualquer máquina que possua o JRE 17 instalado. A execução é feita pelo script `executarAxies.bat`.
